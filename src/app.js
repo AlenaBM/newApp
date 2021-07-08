@@ -1,3 +1,3 @@
-import './style.css'
+import "./style.css";
 
-console.log('app.working');
+console.log("app.working");

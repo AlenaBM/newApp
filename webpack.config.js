@@ -23,6 +23,18 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader'
+      },
+      { 
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+        loader: 'url-loader' 
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader'
+      },
     ],
   },
 }
