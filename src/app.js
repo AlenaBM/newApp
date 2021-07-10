@@ -45,10 +45,13 @@ class App {
   setParameters() {
     const coordsContainer = this.containerNode.getBoundingClientRect();
     this.width = coordsContainer.width;
+    this.maximumX = -(this.size - 1) * this.width;
     this.x = -this.currentSlide * this.width;
 
+    this.resetStyleTransition();
     this.lineNode.style.width = `${this.size * this.width}px`;
     this.lineNode.style.height = `100%`;
+    this.setStylePosition();
     Array.from(this.slideNodes).forEach((slideNode) => {
       slideNode.style.width = `${this.width}px`;
       slideNode.style.height = `100%`;
@@ -59,10 +62,15 @@ class App {
     window.addEventListener('resize', this.debouncedResizeAppWrap);
     this.lineNode.addEventListener('pointerdown', this.startDrag);
     window.addEventListener('pointerup', this.stopDrag);
+    window.addEventListener('pointercancel', this.stopDrag);
   }
 
   destroyEvents() {
     window.removeEventListener('resize', this.debouncedResizeAppWrap);
+    this.lineNode.removeEventListener('pointerdown', this.startDrag);
+    window.removeEventListener('pointerup', this.stopDrag);
+    window.removeEventListener('pointercancel', this.stopDrag);
+
   }
 
   resizeAppWrap() {
@@ -73,24 +81,28 @@ class App {
     this.currentSlideWasChanged = false;
     this.clickX = evt.pageX;
     this.startX = this.x;
+    this.resetStyleTransition();
     window.addEventListener('pointermove', this.dragging);
   }
 
   stopDrag() {
     window.removeEventListener('pointermove', this.dragging);
-    console.log(this.currentSlide);
+    this.x = -this.currentSlide * this.width;
+    this.setStylePosition();
+    this.setStyleTransition();
   }
 
   dragging(evt) {
     this.dragX = evt.pageX;
     const dragShift = this.dragX - this.clickX;
-    this.x = this.startX + dragShift;
+    const easing = dragShift / 5;
+    this.x = Math.max(Math.min(this.startX + dragShift, easing), this.maximumX + easing);
 
     this.setStylePosition();
 
 
     if (
-      dragShift > 20 &&
+      dragShift > 100 &&
       dragShift > 0 &&
       !this.currentSlideWasChanged &&
       this.currentSlide > 0
@@ -100,7 +112,7 @@ class App {
     }
 
     if (
-      dragShift < 20 &&
+      dragShift < 100 &&
       dragShift < 0 &&
       !this.currentSlideWasChanged &&
       this.currentSlide < this.size - 1
@@ -112,6 +124,12 @@ class App {
 
   setStylePosition() {
     this.lineNode.style.transform = `translate3d(${this.x}px, 0, 0)`;
+  }
+  setStyleTransition() {
+    this.lineNode.style.transition = `all 0.5s linear 0s`;
+  }
+  resetStyleTransition() {
+    this.lineNode.style.transition = `all 0s linear 0s`;
   }
 }
 

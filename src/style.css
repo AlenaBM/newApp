@@ -73,6 +73,7 @@ body {
   overflow: hidden;
   height: 100%;
   width: 100%;
+  user-select: none;
 }
 .wrap__slide {
   width: 100%;
@@ -87,8 +88,9 @@ body {
 .app-slide{
   min-height: 1px;
   float: left;
+  transform: translateZ(0);
 }
-/* .slide__container {
+.slide__container {
   width: calc(100% - (126px + 83px));
   height: 100vh;
   margin: 0 auto;
@@ -97,10 +99,10 @@ body {
   flex-direction: column;
   justify-content: space-around;
 } */
-/* .slide__container > div {
+.slide__container > div {
   display: flex;
   height: auto;
-} */
+}
 .app-line{
   overflow: hidden;
 }
@@ -112,12 +114,12 @@ body {
   clear: both;
   height: 0;
 }
-/* .wrap__slide--head {
+.wrap__slide--head {
   background-image: url("/../img/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-} */
+}
 .title {
   font-size: 100px;
   font-weight: 300;
@@ -125,9 +127,10 @@ body {
   text-transform: uppercase;
   line-height: 1.073;
   text-align: left;
-  z-index: 6;
+  z-index: 4;
 }
 .block {
+  display: flex;
   flex-direction: column-reverse;
   position: relative;
 }
@@ -166,9 +169,6 @@ body {
   transform: translateY(-50%);
   z-index: 10;
 }
-.wrap__slide--head {
-  background-color:darkgrey;
-}
 .wrap__slide--description {
   background-color: brown;
 }
@@ -177,4 +177,140 @@ body {
 }
 .wrap__slide--advantages {
   background-color: coral;
+}
+.icon{
+  position: absolute;
+}
+.sperm-icon{
+  top: -90px;
+  left: 300px;
+  width: 850px;
+  z-index: 5;
+}
+.bacteria1-icon{
+  top: -150px;
+  right: 120px;
+  width: 60px;
+  animation: move3 3s infinite linear;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes move3 {
+  0%{
+    top: -150px;
+    right: 120px;
+  }
+  100%{
+    top: -160px;
+    right: 140px;
+    width: 65px;
+  }
+}
+
+
+.bacteria2-icon{
+  top: 5px;
+  right: -10px;
+  width: 100px;
+  animation: rotate 8s infinite linear;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+    top: 0;
+  }
+  25%{
+    top: 0;
+    right: 20px;
+  }
+  50%{
+    top: 3px;
+    right: 25px;
+  }
+  75%{
+    top: 0px;
+    right: 10;
+  }
+  100%{
+    transform: rotate(90deg);
+    top: 0;
+    right: -5px;
+  }
+}
+
+.bacteria3-icon{
+  bottom: 20px;
+  left: -40px;
+  width: 70px;
+  z-index: 3;
+  animation: move2 3s infinite linear;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes move2 {
+  0%{
+    bottom: 20px;
+    left: -40px;
+  }
+  100%{
+    bottom: 45px;
+    left: -55px;
+  }
+}
+.bacteria4-icon{
+  top: 50px;
+  left: -140px;
+  width: 280px;
+}
+.bacteria5-icon{
+  top: 25px;
+  right: 40px;
+  width: 60px;
+}
+.bacteria6-icon{
+  bottom: 50px;
+  left: 40px;
+  width: 280px;
+  animation: move1 5s infinite linear;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes move1 {
+  0%{
+    bottom: 50px;
+    left: 40px;
+  }
+  100%{
+    bottom: 80px;
+    left: 70px;
+  }
+}
+.bacteria7-icon{
+  bottom: 80px;
+  left: 400px;
+  width: 70px;
+}
+.bacteria8-icon{
+  bottom: -100px;
+  right: 160px;
+  width: 200px;
+  animation: scale 8s infinite linear;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes scale {
+  0%{
+    width: 300px;
+  }
+  50%{
+    bottom: -50px;
+  }
+  75%{
+    bottom: -40px;
+  }
+  100%{
+    bottom: -45px;
+  }
 }
