@@ -8,7 +8,7 @@ class App {
   constructor(element, options = {}) {
     this.containerNode = element;
     this.size = element.childElementCount;
-    this.currentSlide = 0;
+    this.currentSlide = 2;
     this.currentSlideWasChanged = false;
 
     this.manageHTML = this.manageHTML.bind(this);
@@ -97,6 +97,7 @@ class App {
     this.x = Math.max(Math.min(this.startX + dragShift, easing), this.maximumX + easing);
 
     this.setStylePosition();
+    this.setAnimation();
 
 
     if (
@@ -120,6 +121,22 @@ class App {
     }
   }
 
+  setAnimation() {
+    const sperm1 = document.querySelector('.sperm2-icon');
+    sperm1.style.cssText = `animation: spermMoving1 2.4s 1 linear`;
+
+    const sperm2 = document.querySelector('.sperm3-icon');
+    sperm2.style.cssText = `animation: spermMoving2 2.4s 1 linear`;
+
+    const sperm3 = document.querySelector('.sperm4-icon');
+    sperm3.style.cssText = `animation: spermMoving3 2.4s 1 linear`;
+
+    const sperm4 = document.querySelector('.sperm5-icon');
+    sperm4.style.cssText = `animation: spermMoving4 2.4s 1 linear`;
+
+    const sperm5 = document.querySelector('.sperm6-icon');
+    sperm5.style.cssText = `animation: spermMoving5 2.4s 1 linear`;
+  }
   setStylePosition() {
     this.lineNode.style.transform = `translateX(${this.x}px)`;
   }

@@ -124,19 +124,19 @@ body {
 .wrap__slide--head {
   background-image: url("/../img/head-slide/bg.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: center center;
 }
 .wrap__slide--description {
   background-image: url("/../img/description-slide/bg.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: center center;
 }
 .wrap__slide--keyMessage {
   background-image: url("/../img/keymessage-slide/bg.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: center center;
 }
 .title {
@@ -169,11 +169,11 @@ body {
   text-align: left;
 }
 .title-child{
-  font-size: 35px;
+  font-size: 30px;
   font-family: "DIN Pro";
   color: rgb(36, 36, 36);
   text-transform: uppercase;
-  line-height: auto;
+  margin-bottom: 1.4em;
   text-align: left;
   font-weight: normal;
 }
@@ -186,20 +186,26 @@ body {
   border-radius: 5em;
   position: absolute;
   right: 0;
-  bottom: 20px;
-  padding: 20px 40px 20px 80px;
+  bottom: 18px;
+  padding: 25px 40px 25px 80px;
 }
 .block__button::after {
   content: "";
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
   background-color: #000;
+  background-image: url("/../img/head-slide/next.svg");
+  background-repeat:no-repeat;
+  background-size: 22px;
+  background-position: center center;
   position: absolute;
-  left: 15px;
+  left: 13px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+  border: 4px solid rgb(255, 106, 162, 1);
+  border-style: inset;
 }
 
 .icon{
@@ -214,9 +220,9 @@ body {
 .bacteria1-icon{
   top: -150px;
   right: 120px;
-  width: 60px;
+  width: 50px;
   animation: move3 3s infinite linear;
-  animation-direction: alternate-reverse;
+  animation-direction: alternate;
 }
 
 @keyframes move3 {
@@ -227,17 +233,14 @@ body {
   100%{
     top: -160px;
     right: 140px;
-    width: 65px;
   }
 }
-
-
 .bacteria2-icon{
   top: 70px;
   right: -10px;
   width: 100px;
   animation: rotate 10s infinite linear;
-  animation-direction: alternate-reverse;
+  animation-direction: alternate;
 }
 
 @keyframes rotate {
@@ -262,7 +265,7 @@ body {
   width: 70px;
   z-index: 3;
   animation: move2 3s infinite linear;
-  animation-direction: alternate-reverse;
+  animation-direction: alternate;
 }
 
 @keyframes move2 {
@@ -290,7 +293,7 @@ body {
     left: 0;
     width: 260px;
   animation: move1 5s infinite linear;
-  animation-direction: alternate-reverse;
+  animation-direction: alternate;
 }
 
 @keyframes move1 {
@@ -309,25 +312,19 @@ body {
   width: 70px;
 }
 .bacteria8-icon{
-  bottom: -100px;
-  right: 160px;
+  bottom: -80px;
+  right: 300px;
   width: 200px;
-  animation: scale 8s infinite linear;
-  animation-direction: alternate-reverse;
+  animation: scale 10s infinite linear;
+  animation-direction: alternate;
 }
 
 @keyframes scale {
   0%{
-    width: 300px;
-  }
-  50%{
-    bottom: -50px;
-  }
-  75%{
-    bottom: -40px;
+    width: 200px;
   }
   100%{
-    bottom: -45px;
+    width: 270px;
   }
 }
 
@@ -337,22 +334,20 @@ body {
   border-radius: 30px;
   overflow: hidden;
   padding: 2em;
-  max-height: 400px;
+  height: 400px;
   position: relative;
+  width: 760px;
+  margin-left: auto;
 }
-.text-description-wrap::after{
+.block-descr::before{
   content:"";
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(255, 255, 255, 0.7) 100%);
-  transition: opacity 0.3s linear;
-}
-.text-description-wrap:hover::after{
-  opacity: 0;
+  left: 9px;
+  width: 5px;
+  border-radius: 15px;
+  height: 390px;
+  background-color: #000;
 }
 .text-description{
   font-size: 20px;
@@ -360,80 +355,131 @@ body {
   color: rgb(23, 23, 23);
   line-height: 1.364;
   text-align: left;
-  height: 100%;
+  max-height: 330px;
+  width: 100%;
   overflow-y: scroll;
-  position: relative;
+  position: absolute;
   direction: rtl;
+  user-select: contain;
+  top: 150px;
+  padding-left: 70px;
+  padding-right: 40px;
 }
+
 .text-description-span{
   font-weight: 600;
 }
-
 .text-description::-webkit-scrollbar {
-    width: 40px; /* ширина для вертикального скролла */
-    height: auto; /* высота для горизонтального скролла */
-    background-color: transparent;
-}
-.text-description::-webkit-scrollbar::after{
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 7px; /* ширина для вертикального скролла */
-  height: 8px;
-  border-radius: 5px;
-  background-color: #000;
+  width: 25px; /* ширина для вертикального скролла */
+  background-color: transparent;
 }
 /* ползунок скроллбара */
 .text-description::-webkit-scrollbar-thumb {
   background-image: url("/../img/description-slide/scroll.svg");
   background-repeat: no-repeat;
-  background-size: content;
-  background-position: top top;
-  user-select:contain;
-  position: relative;
-}
-.text-description::after::-webkit-scrollbar-thumb{
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 7px; /* ширина для вертикального скролла */
-  height: 8px;
-  border-radius: 5px;
-  background-color: #000;
+  background-size: 20px;
+  background-position: top center;
+  user-select: contain;
 }
 .sperm2-icon{
   width: 970px;
   top: -30px;
   right: -400px;
+  opacity: 0.9;
+}
+@keyframes spermMoving1{
+  0%{
+  opacity: 0;
+  top: -20px;
+  right: -460px;
+  }
+  100%{
+  opacity: 1;
+  top: -30px;
+  right: -400px;
+  }
 }
 .sperm3-icon{
   width: 890px;
   top: -60px;
   right: -550px;
 }
+@keyframes spermMoving2{
+  0%{
+  opacity: 0;
+  top: -50px;
+  right: -590px;
+  }
+  100%{
+  opacity: 1;
+  top: -60px;
+  right: -550px;
+  }
+}
 .sperm4-icon{
   width: 500px;
   top: -80px;
   right: -300px;
 }
+@keyframes spermMoving3{
+  0%{
+  opacity: 0;
+  top: -70px;
+  right: -350px;
+  }
+  100%{
+  opacity: 1;
+  top: -80px;
+  right: -300px;
+  }
+}
+.sperm-icon-descr{
+  transition: opacity 0.3s linear;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
 .sperm5-icon{
   width: 450px;
-  top: 300px;
-  right: -450px;
+  left: -300px;
+  top: 230px;
+}
+@keyframes spermMoving4{
+  0%{
+  opacity: 0;
+  left: -280px;
+  top: 240px;
+  }
+  100%{
+  opacity: 1;
+  left: -300px;
+  top: 230px;
+  }
 }
 .sperm6-icon{
   width: 430px;
-  top: 400px;
-  right: -450px;
+  bottom: -150px;
+  left: -300px;
 }
-
+@keyframes spermMoving5{
+  0%{
+  opacity: 0;
+  bottom: -160px;
+  left: -280px;
+  }
+  100%{
+  opacity: 1;
+  bottom: -150px;
+  left: -300px;
+  }
+}
 .title-child-keyMessage{
-  margin-left: 2.3em;
-  margin-bottom: 2em;
+  margin-left: 4.2em;
+  margin-bottom: 3em;
+  letter-spacing: 4px;
 }
 
 .title-brand-span{
-  font-size: 56px;
+  font-size: 80px;
   font-family: "Gilroy";
   font-weight: normal;
   color: rgb(36, 36, 36);
@@ -452,7 +498,7 @@ body {
 .block-pills{
   display: flex;
   flex-direction: row;
-  column-gap: 3em;
+  column-gap: 2.5em;
 }
 .items-wrap{
   display: flex;
@@ -468,15 +514,34 @@ body {
   box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
 }
 .item-pills-recipe{
-  padding-left: 5em;
+  padding-left: 8em;
 }
 .item-pills-btn{
   position: relative;
   text-decoration: none;
   color: #000;
+  bottom: 0;
+}
+.item-pills-btn::after {
+  content: "";
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  background-color: #000;
+  background-image: url("/../img/keymessage-slide/more.svg");
+  background-repeat:no-repeat;
+  background-size: 22px;
+  background-position: center center;
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border: 4px solid rgb(255, 106, 162, 1);
+  border-style: inset;
 }
 .pills-descr{
-  font-size: 25px;
+  font-size: 24px;
   font-family: "DIN Pro";
   color: rgb(46, 46, 46);
   line-height: 1.2;
@@ -486,7 +551,7 @@ body {
   content: '';
   position: absolute;
   top: -40px;
-  left: 5em;
+  left: 7.7em;
   width: 80px;
   height: 80px;
   background-image: url("/../img/keymessage-slide/icon-plate.png");
@@ -507,14 +572,14 @@ body {
   background-position: center center;
 }
 .bottle-icon{
-  top: -30px;
+  top: -75px;
   left: -160px;
-  width: 210px;
+  width: 230px;
   z-index: 60;
 }
 .bubble1-icon{
-  top: -40px;
-  left: -30px;
+  top: -90px;
+  left: -20px;
   width: 40px;
   z-index: 40;
 }
@@ -527,19 +592,19 @@ body {
 .bubble3-icon{
   width: 120px;
   top: 130px;
-  left: -50px;
+  left: -30px;
   z-index: 50;
 }
 .bubble4-icon{
   width: 70px;
     top: 400px;
-    left: 10px;
+    left: 25px;
     z-index: 50;
 }
 .bubble5-icon{
   width: 60px;
     top: 220px;
-    left: 70px;
+    left: 100px;
     z-index: 70;
 }
 .bubble6-icon{
@@ -579,10 +644,11 @@ body {
 }
 .title-child-popup{
   margin-bottom: 1em;
+  letter-spacing: 4px;
 }
 .block-keyMessage-popup{
   position: relative;
-  padding: 1.7em 1.7em 1.7em 9em;
+  padding: 1.7em 1.7em 1.7em 10em;
   border-radius: 30px;
   background-color: rgb(255, 255, 255);
   width: 90%;
