@@ -10,7 +10,7 @@ class App {
   constructor(element, options = {}) {
     this.containerNode = element;
     this.size = element.childElementCount;
-    this.currentSlide = 0;
+    this.currentSlide = 2;
     this.currentSlideWasChanged = false;
 
     this.manageHTML = this.manageHTML.bind(this);
@@ -102,7 +102,7 @@ class App {
 
 
     if (
-      dragShift > 100 &&
+      dragShift > -100 &&
       dragShift > 0 &&
       !this.currentSlideWasChanged &&
       this.currentSlide > 0
@@ -123,7 +123,7 @@ class App {
   }
 
   setStylePosition() {
-    this.lineNode.style.transform = `translate3d(${this.x}px, 0, 0)`;
+    this.lineNode.style.transform = `translateX(${this.x}px)`;
   }
   setStyleTransition() {
     this.lineNode.style.transition = `all 0.5s linear 0s`;

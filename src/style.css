@@ -92,7 +92,7 @@ body {
 }
 .slide__container {
   width: calc(100% - (126px + 83px));
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -115,7 +115,19 @@ body {
   height: 0;
 }
 .wrap__slide--head {
-  background-image: url("/../img/bg.png");
+  background-image: url("/../img/head-slide/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.wrap__slide--description {
+  background-image: url("/../img/description-slide/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.wrap__slide--keyMessage {
+  background-image: url("/../img/keymessage-slide/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -131,8 +143,11 @@ body {
 }
 .block {
   display: flex;
-  flex-direction: column-reverse;
   position: relative;
+  flex-direction: column;
+}
+.block-head{
+  flex-direction: column-reverse;
 }
 .title__accent {
   font-weight: bold;
@@ -145,7 +160,16 @@ body {
   line-height: auto;
   text-align: left;
 }
-.block__bitton {
+.title-child{
+  font-size: 35px;
+  font-family: "DIN Pro";
+  color: rgb(36, 36, 36);
+  text-transform: uppercase;
+  line-height: auto;
+  text-align: left;
+  font-weight: normal;
+}
+.block__button {
   background-color: #ff6aa2;
   font-size: 26px;
   outline: none;
@@ -154,30 +178,22 @@ body {
   border-radius: 5em;
   position: absolute;
   right: 0;
-  bottom: 0;
-  padding: 52px 70px 52px 160px;
+  bottom: 20px;
+  padding: 20px 40px 20px 80px;
 }
-.block__bitton::after {
+.block__button::after {
   content: "";
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background-color: #000;
   position: absolute;
-  left: 20px;
+  left: 15px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
 }
-.wrap__slide--description {
-  background-color: brown;
-}
-.wrap__slide--keyMessage {
-  background-color: cadetblue;
-}
-.wrap__slide--advantages {
-  background-color: coral;
-}
+
 .icon{
   position: absolute;
 }
@@ -313,4 +329,153 @@ body {
   100%{
     bottom: -45px;
   }
+}
+
+.text-description-wrap{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 2em;
+  max-height: 400px;
+  position: relative;
+}
+.text-description-wrap::after{
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(255, 255, 255, 0.7) 100%);
+  transition: opacity 0.3s linear;
+}
+.text-description-wrap:hover::after{
+  opacity: 0;
+}
+.text-description{
+  font-size: 20px;
+  font-family: "DIN Pro";
+  color: rgb(23, 23, 23);
+  line-height: 1.364;
+  text-align: left;
+  height: 100%;
+  overflow-y: scroll;
+  position: relative;
+  direction: rtl;
+}
+.text-description-span{
+  font-weight: 600;
+}
+
+.text-description::-webkit-scrollbar {
+    width: 40px; /* ширина для вертикального скролла */
+    height: auto; /* высота для горизонтального скролла */
+    background-color: transparent;
+}
+.text-description::-webkit-scrollbar::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 7px; /* ширина для вертикального скролла */
+  height: 8px;
+  border-radius: 5px;
+  background-color: #000;
+}
+/* ползунок скроллбара */
+.text-description::-webkit-scrollbar-thumb {
+  background-image: url("/../img/description-slide/scroll.svg");
+  background-repeat: no-repeat;
+  background-size: content;
+  background-position: top top;
+  user-select:contain;
+  position: relative;
+}
+.text-description::after::-webkit-scrollbar-thumb{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 7px; /* ширина для вертикального скролла */
+  height: 8px;
+  border-radius: 5px;
+  background-color: #000;
+}
+.sperm2-icon{
+  width: 970px;
+  top: -30px;
+  right: -400px;
+}
+.sperm3-icon{
+  width: 890px;
+  top: -60px;
+  right: -550px;
+}
+.sperm4-icon{
+  width: 500px;
+  top: -80px;
+  right: -300px;
+}
+.sperm5-icon{
+  width: 450px;
+  top: 300px;
+  right: -450px;
+}
+.sperm6-icon{
+  width: 430px;
+  top: 400px;
+  right: -450px;
+}
+
+.title-child-keyMessage{
+  margin-left: 2.3em;
+  margin-bottom: 3em;
+}
+
+.title-brand-span{
+  font-size: 52px;
+  font-family: "Gilroy";
+  font-weight: normal;
+  color: rgb(36, 36, 36);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+}
+.title-brand-name{
+  font-weight: bold;
+}
+.block-keyMessage{
+  width: 86%;
+  margin-left: auto;
+  margin-right: 0;
+}
+.block-pills{
+  display: flex;
+  flex-direction: row;
+  column-gap: 3em;
+}
+.items-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item-pills{
+  background-color: #fff;
+  padding: 1.7em;
+  padding-top: 2.5em;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
+}
+.item-pills-recipe{
+  padding-left: 5em;
+}
+.item-pills-btn{
+  position: relative;
+}
+.pills-descr{
+  font-size: 25px;
+  font-family: "DIN Pro";
+  color: rgb(46, 46, 46);
+  line-height: 1.2;
 }
