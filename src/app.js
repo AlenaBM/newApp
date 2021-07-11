@@ -1,7 +1,5 @@
 import "./style.css";
 
-console.log("app.working");
-
 const appClassName = 'wrap';
 const appLineClassName = 'app-line';
 const appSlideClassName = 'app-slide';
@@ -10,7 +8,7 @@ class App {
   constructor(element, options = {}) {
     this.containerNode = element;
     this.size = element.childElementCount;
-    this.currentSlide = 2;
+    this.currentSlide = 0;
     this.currentSlideWasChanged = false;
 
     this.manageHTML = this.manageHTML.bind(this);
@@ -154,3 +152,32 @@ function debounce(func, time = 100) {
 
 
 new App(document.getElementById('appWrap'));
+
+
+
+const popupList = document.querySelector('.popup-list');
+const popupHead = popupList.querySelector('.head-list');
+const popupChild = popupList.querySelector('.popup-ul-child');
+const btnPrev = popupList.querySelector('.popup-btn-prev');
+const btnNext = popupList.querySelector('.popup-btn-next');
+const dot = popupList.querySelector('.dot-active');
+const dotChild = popupList.querySelector('.dot-child');
+
+
+function nextSlide(e) {
+  e.preventDefault();
+  popupHead.classList.remove('head-list');
+  popupChild.classList.add('head-list');
+  dot.classList.remove('dot-active');
+  dotChild.classList.add('dot-active');
+}
+function prevSlide(e) {
+  e.preventDefault();
+  popupHead.classList.add('head-list');
+  popupChild.classList.remove('head-list');
+  dot.classList.add('dot-active');
+  dotChild.classList.remove('dot-active');
+}
+
+btnNext.addEventListener('click', nextSlide);
+btnPrev.addEventListener('click', prevSlide);
