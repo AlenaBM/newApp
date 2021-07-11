@@ -221,7 +221,7 @@ body {
   top: -150px;
   right: 120px;
   width: 50px;
-  animation: move3 3s infinite linear;
+  animation: move3 2s infinite linear;
   animation-direction: alternate;
 }
 
@@ -239,7 +239,7 @@ body {
   top: 70px;
   right: -10px;
   width: 100px;
-  animation: rotate 10s infinite linear;
+  animation: rotate 7s infinite linear;
   animation-direction: alternate;
 }
 
@@ -264,7 +264,7 @@ body {
   left: -40px;
   width: 70px;
   z-index: 3;
-  animation: move2 3s infinite linear;
+  animation: move2 2s infinite linear;
   animation-direction: alternate;
 }
 
@@ -292,7 +292,7 @@ body {
   bottom: 30px;
     left: 0;
     width: 260px;
-  animation: move1 5s infinite linear;
+  animation: move1 4s infinite linear;
   animation-direction: alternate;
 }
 
@@ -315,7 +315,7 @@ body {
   bottom: -80px;
   right: 300px;
   width: 200px;
-  animation: scale 10s infinite linear;
+  animation: scale 6s infinite linear;
   animation-direction: alternate;
 }
 
@@ -582,48 +582,157 @@ body {
   left: -20px;
   width: 40px;
   z-index: 40;
+  animation: bubbleMove1 2.4s infinite linear;
+  animation-direction: alternate;
+}
+
+@keyframes bubbleMove1 {
+  0%{
+  top: -90px;
+  left: -20px;
+  }
+  100%{
+  top: -60px;
+  left: 10px;
+  }
 }
 .bubble2-icon{
   top: 80px;
   left: -140px;
   width: 40px;
   z-index: 40;
+  animation: bubbleMove2 1.4s infinite linear;
+  animation-direction: alternate;
+}
+@keyframes bubbleMove2 {
+  0%{
+  top: 80px;
+  left: -140px;
+  }
+  100%{
+  top: 90px;
+  left: -130px;
+  }
 }
 .bubble3-icon{
   width: 120px;
   top: 130px;
   left: -30px;
   z-index: 50;
+  animation: bubbleMove3 2s infinite linear;
+  animation-direction: alternate;
+}
+@keyframes bubbleMove3 {
+  0%{
+  top: 130px;
+  left: -30px;
+  }
+  100%{
+  top: 150px;
+  left: 0;
+  }
 }
 .bubble4-icon{
   width: 70px;
-    top: 400px;
-    left: 25px;
-    z-index: 50;
+  top: 400px;
+  left: 25px;
+  z-index: 50;
+  animation: bubbleMove4 2s infinite linear;
+  animation-direction: alternate;
+}
+@keyframes bubbleMove4 {
+  0%{
+  width: 70px;
+  }
+  100%{
+  width: 90px;
+  }
 }
 .bubble5-icon{
   width: 60px;
-    top: 220px;
-    left: 100px;
-    z-index: 70;
+  top: 220px;
+  left: 100px;
+  z-index: 70;
+  animation: bubbleMove5 2.7s infinite linear;
+  animation-direction: alternate;
+}
+@keyframes bubbleMove5 {
+  0%{
+  top: 220px;
+  left: 100px;
+  width: 60px;
+  }
+  50%{
+  top: 200px;
+  left: 70px;
+  width: 65px;
+  }
+  100%{
+  top: 180px;
+  left: 100px;
+  width: 60px;
+  }
 }
 .bubble6-icon{
-      width: 40px;
-    bottom: 220px;
-    left: -90px;
-    z-index: 70;
+  width: 40px;
+  bottom: 220px;
+  left: -90px;
+  z-index: 70;
+  animation: bubbleMove6 2s infinite linear;
+  animation-direction: alternate;
+}
+@keyframes bubbleMove6 {
+  0%{
+  width: 40px;
+  bottom: 220px;
+  left: -90px;
+  }
+  100%{
+  width: 44px;
+  bottom: 250px;
+  left: -100px;
+  }
 }
 .bubble7-icon{
   width: 70px;
-    bottom: 100px;
-    left: -40px;
-    z-index: 70;
+  bottom: 100px;
+  left: -40px;
+  z-index: 70;
+  animation: bubbleMove7 2.6s infinite linear;
+  animation-direction: alternate;
+}
+@keyframes bubbleMove7 {
+  0%{
+  width: 70px;
+  bottom: 100px;
+  left: -40px;
+  }
+  50%{
+  width: 82px;
+  bottom: 120px;
+  left: -60px;
+  }
+  100%{
+  width: 72px;
+  bottom: 140px;
+  left: -30px;
+  }
 }
 .bubble8-icon{
   width: 150px;
-    bottom: -70px;
-    left: 100px;
-    z-index: 75;
+  bottom: -70px;
+  left: 100px;
+  z-index: 75;
+  animation: bubbleMove8 2s infinite linear;
+  animation-direction: alternate;
+}
+@keyframes bubbleMove8 {
+  0%{
+  width: 150px;
+  }
+  100%{
+  width: 168px;
+  }
 }
 .popup{
   position: fixed;

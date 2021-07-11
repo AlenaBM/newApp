@@ -8,7 +8,7 @@ class App {
   constructor(element, options = {}) {
     this.containerNode = element;
     this.size = element.childElementCount;
-    this.currentSlide = 2;
+    this.currentSlide = 0;
     this.currentSlideWasChanged = false;
 
     this.manageHTML = this.manageHTML.bind(this);
@@ -181,6 +181,7 @@ const dot = popupList.querySelector('.dot-active');
 const dotChild = popupList.querySelector('.dot-child');
 
 
+
 function nextSlide(e) {
   e.preventDefault();
   popupHead.classList.remove('head-list');
@@ -195,6 +196,7 @@ function prevSlide(e) {
   dot.classList.add('dot-active');
   dotChild.classList.remove('dot-active');
 }
+
 
 btnNext.addEventListener('click', nextSlide);
 btnPrev.addEventListener('click', prevSlide);
