@@ -3,11 +3,8 @@ const HTMLPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/app.js',
-  output: {
-    filename: 'bundle.[chunkhash].js',
-    path: path.resolve(__dirname, 'public')
-  },
+  mode: 'development',
+  entry: './src/index.js',
   devServer: {
     port: 3000
   },
@@ -24,17 +21,21 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpg)$/,
-        loader: 'url-loader'
-      },
-      { 
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
-        loader: 'url-loader' 
+        test: /\.(png|jpe?g|gif|svg|webp)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       },
       {
-        test: /\.svg$/,
-        loader: 'svg-sprite-loader'
+        test: /\.(woff|woff2|eot|ttf)$/,
+        loader: 'url-loader'
       },
     ],
   },
+  output: {
+    filename: 'bundle.[chunkhash].js',
+    path: path.resolve(__dirname, 'dist')
+  }
 }

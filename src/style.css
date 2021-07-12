@@ -1,43 +1,43 @@
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-ExtraBold.eot");
-  src: url("../fonts/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"),
-    url("../fonts/Gilroy-ExtraBold.woff") format("woff"),
-    url("../fonts/Gilroy-ExtraBold.ttf") format("truetype");
+  src: url("./fonts/Gilroy-ExtraBold.eot");
+  src: url("./fonts/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Gilroy-ExtraBold.woff2") format("woff2"),
+    url("./fonts/Gilroy-ExtraBold.woff") format("woff"),
+    url("./fonts/Gilroy-ExtraBold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Light.eot");
-  src: url("../fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Gilroy-Light.woff2") format("woff2"),
-    url("../fonts/Gilroy-Light.woff") format("woff"),
-    url("../fonts/Gilroy-Light.ttf") format("truetype");
+  src: url("./fonts/Gilroy-Light.eot");
+  src: url("./fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Gilroy-Light.woff2") format("woff2"),
+    url("./fonts/Gilroy-Light.woff") format("woff"),
+    url("./fonts/Gilroy-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Regular.eot");
-  src: url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Gilroy-Regular.woff2") format("woff2"),
-    url("../fonts/Gilroy-Regular.woff") format("woff"),
-    url("../fonts/Gilroy-Regular.ttf") format("truetype");
+  src: url("./fonts/Gilroy-Regular.eot");
+  src: url("./fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Gilroy-Regular.woff2") format("woff2"),
+    url("./fonts/Gilroy-Regular.woff") format("woff"),
+    url("./fonts/Gilroy-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "DIN Pro";
-  src: url("../fonts/DINPro-Light.eot");
-  src: url("../fonts/DINPro-Light.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/DINPro-Light.woff2") format("woff2"),
-    url("../fonts/DINPro-Light.woff") format("woff"),
-    url("../fonts/DINPro-Light.ttf") format("truetype");
+  src: url("./fonts/DINPro-Light.eot");
+  src: url("./fonts/DINPro-Light.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/DINPro-Light.woff2") format("woff2"),
+    url("./fonts/DINPro-Light.woff") format("woff"),
+    url("./fonts/DINPro-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -122,19 +122,19 @@ body {
   height: 0;
 }
 .wrap__slide--head {
-  background-image: url("/../img/head-slide/bg.png");
+  background-image: url("./img/head-slide/bg.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
 }
 .wrap__slide--description {
-  background-image: url("/../img/description-slide/bg.png");
+  background-image: url("./img/description-slide/bg.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
 }
 .wrap__slide--keyMessage {
-  background-image: url("/../img/keymessage-slide/bg.png");
+  background-image: url("./img/keymessage-slide/bg.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
@@ -195,7 +195,7 @@ body {
   width: 52px;
   height: 52px;
   background-color: #000;
-  background-image: url("/../img/head-slide/next.svg");
+  background-image: url("./img/head-slide/next.svg");
   background-repeat:no-repeat;
   background-size: 22px;
   background-position: center center;
@@ -375,7 +375,7 @@ body {
 }
 /* ползунок скроллбара */
 .text-description::-webkit-scrollbar-thumb {
-  background-image: url("/../img/description-slide/scroll.svg");
+  background-image: url("./img/description-slide/scroll.svg");
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: top center;
@@ -528,7 +528,7 @@ body {
   width: 52px;
   height: 52px;
   background-color: #000;
-  background-image: url("/../img/keymessage-slide/more.svg");
+  background-image: url("./img/keymessage-slide/more.svg");
   background-repeat:no-repeat;
   background-size: 22px;
   background-position: center center;
@@ -554,7 +554,7 @@ body {
   left: 7.7em;
   width: 80px;
   height: 80px;
-  background-image: url("/../img/keymessage-slide/icon-plate.png");
+  background-image: url("./img/keymessage-slide/icon-plate.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -566,7 +566,7 @@ body {
   left: 1.7em;
   width: 80px;
   height: 80px;
-  background-image: url("/../img/keymessage-slide/icon-calendar.png");
+  background-image: url("./img/keymessage-slide/icon-calendar.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
