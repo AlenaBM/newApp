@@ -1,6 +1,6 @@
 # newApp
 [Click here to watch a website](https://alena-web.ru/test-onpoint)<br>
-This application is created for testing in compatibility mode with iPad (1024x768).
+This application was created for testing in compatibility mode with iPad (1024x768).
 ______________________________________________
 
 [Кликни, чтобы посмотреть веб-сайт](https://alena-web.ru/test-onpoint)<br>
