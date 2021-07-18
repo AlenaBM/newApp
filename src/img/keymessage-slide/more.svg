@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
   <defs>
+  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
     <style>
       .cls-1 {
         font-size: 60px;
@@ -7,6 +8,8 @@
         font-family: Gilroy;
       }
     </style>
+    <stop offset="0" stop-color="#fff"/>
+    <stop offset="1" stop-color="#fff"/>
   </defs>
-  <text id="_" data-name="+" class="cls-1" x="-3.4" y="34.39">+</text>
+  <text id="_" data-name="+" class="cls-1" x="-3.4" y="33.39">+</text>
 </svg>
